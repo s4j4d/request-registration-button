@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        direction: rtl;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>لطفا مشخصات خود را وارد کنید</h1>
+      <form action="/register" method="post">
+        <div class="form-group">
+          <label for="nameAndLastName">نام و نام خانوادگی</label><br />
+          <input
+            type="text"
+            id="nameAndLastName"
+            name="nameAndLastName"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">شماره تماس</label><br />
+          <input
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            pattern="(?:\+98|0)?9\d{9}"
+            title="Iranian phone number format"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">ایمیل</label><br />
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="address">آدرس</label><br />
+          <input type="text" id="address" name="address" />
+        </div>
+        <div class="form-group">
+          <label for="description">توضیحات کوتاه در مورد مشکل</label><br />
+          <textarea id="description" name="description"></textarea>
+        </div>
+        <button type="submit">ثبت درخواست</button>
+      </form>
+    </div>
+  </body>
+</html>
