@@ -11,7 +11,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
-app.use(express.static("./views"));
+app.use(express.static(__dirname + "/views"));
 
 app.use("/", userRoute);
 
