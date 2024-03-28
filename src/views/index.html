@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Page</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="css/persian.datepicker.css" />
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/persian-date/dist/persian-date.js/persian.date.js"></script>
-    <script src="node_modules/persian-date/dist/persian-date.js/persian.datepicker.js"></script>
-    <!-- <link
+    <link rel="stylesheet" href="persian-datepicker.css" />
+    <script src="jquery.js"></script>
+    <script src="persian-datepicker.js"></script>
+    <script src="persian-date.js"></script>
+    <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
@@ -20,7 +20,7 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/persian-datepicker/dist/css/persian-datepicker.min.css"
-    /> -->
+    />
   </head>
   <body>
     <div class="container">
@@ -60,11 +60,21 @@
         </div>
         <div class="form-group">
           <label for="appointmentDate">انتخاب روز مشخص</label><br />
-          <input
+          <!-- <input
             type="text"
             id="appointmentDate"
             name="appointmentDate"
             class="datepicker-here"
+            data-language="fa"
+            data-position="bottom right"
+            data-multiple-dates="3"
+            placeholder="تاریخ مورد نظر را وارد کنید"
+          /> -->
+          <input
+            type="text"
+            id="appointmentDate"
+            name="appointmentDate"
+            class="initial-value-example"
             data-language="fa"
             data-position="bottom right"
             data-multiple-dates="3"
