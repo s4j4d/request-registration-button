@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const userController = require("./controllers/userController");
+const userRoute = require("./routes/user.route");
 
 const app = express();
 const port = 3000;
@@ -13,7 +13,7 @@ mongoose
 
 app.use(express.static("./views"));
 
-app.use("/", userController);
+app.use("/", userRoute);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
